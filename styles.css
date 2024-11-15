@@ -16,9 +16,8 @@ body {
 }
 
 /* COVER */
-
 #cover {
-    background-image: url('background2.jpeg');
+    background-image: url('gallery5.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -28,9 +27,25 @@ body {
     align-items: center;
     height: 100vh;
     text-align: center;
+    color: white;
 }
 
-h1 {
+#cover .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#cover > *:not(.overlay) {
+    position: relative;
+    z-index: 2;
+}
+
+#cover h1 {
     font-size: 1em;
     margin-bottom: 10px;
     font-family: "Poppins", sans-serif;
@@ -46,14 +61,19 @@ h1 {
     font-size: 3em;
 }
 
-p {
-    font-size: 1em;
+#cover p {
+    font-size: 0.8em;
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
     line-height: 3;
+}
+
+#guest {
+    font-size: 1em;
+    margin: 0;
 }
 
 #openInvitation {
@@ -77,16 +97,16 @@ p {
     padding: 10px 20px; /* Mengatur padding untuk tombol */
     font-size: 16px; /* Mengatur ukuran font */
     cursor: pointer; /* Mengubah kursor saat hover */
-    border: 2px solid #333; /* Mengatur border tombol */
+    border: 2px solid white; /* Mengatur border tombol */
     background: transparent; /* Mengatur latar belakang tombol menjadi transparan */
-    color: #333; /* Mengatur warna teks tombol */
+    color: white; /* Mengatur warna teks tombol */
     border-radius: 5px; /* Mengatur sudut tombol */
     transition: background-color 0.3s, color 0.3s; /* Menambahkan efek transisi */
 }
 
 .transparentButton:hover {
-    background-color: #333; /* Mengatur latar belakang saat hover */
-    color: #fff; /* Mengatur warna teks saat hover */
+    background-color: var(--nav-color); /* Mengatur latar belakang saat hover */
+    color: white; /* Mengatur warna teks saat hover */
 }
 
 
@@ -1106,7 +1126,7 @@ footer {
 
     /* COVER */
     #cover {
-        background-image: url('background1.jpeg');
+        background-image: url('gallery4.jpeg');
     }
 
     /* SECTION 1 */
